@@ -11,14 +11,20 @@ public class Controller
 {
 	public static void main(String[] args)
 	{
+		// Initialize EntityManager and EntityTransaction
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dev");
 		EntityManager entityManager	= entityManagerFactory.createEntityManager();
 		EntityTransaction entityTransaction = entityManager.getTransaction();
 		
+		// Create instance
 		Employee employee = new Employee();
 		Employer employer = new Employer();
+		
+		// Initialize Scanner
 		Scanner sc = new Scanner(System.in);
 		
+		
+		// Take Employee information From User
 		System.out.println("Enter Employee Id : ");
 		int employee_id = sc.nextInt();
 		
@@ -28,6 +34,8 @@ public class Controller
 		System.out.println("Enter Employee Contact : ");
 		long employee_contact = sc.nextLong();
 		
+		
+		// Take Employer information From User
 		System.out.println("Enter Employer Id : ");
 		int employer_id = sc.nextInt();
 		
@@ -37,6 +45,8 @@ public class Controller
 		System.out.println("Enter Employer Contact");
 		long employer_contact = sc.nextLong();
 		
+		
+	    // Create and set Employee and Employer entities
 		employee.setEmployer_id(employer_id);
 		employee.setEmployee_name(employee_name);
 		employee.setEmployee_contact(employee_contact);
@@ -51,6 +61,8 @@ public class Controller
 //		All Employee Information Has Been Stored inside Employer		
 		employer.setEmployee(employee);
 		
+		
+		// Persist entities
 		entityTransaction.begin();
 		entityManager.persist(employee);
 		entityManager.persist(employer);

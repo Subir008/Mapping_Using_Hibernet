@@ -5,21 +5,28 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+//@Entity: Specifies that the class is an entity and is mapped to a database table.
 @Entity
 public class Employer 
 {
+//	@Id: Specifies the primary key of an entity.
 	@Id
 	int employer_id;
 	
 	@Column(nullable = false)
 	String employer_name;
 	
+//	@Column(nullable = false): Ensures that the column cannot be null.
+//	@Column(unique = true): Ensures that the values in the column are unique.
 	@Column(nullable = false, unique = true)
 	long employer_contact;
 	
+//	@OneToOne: Defines a one-to-one relationship with the Employee entity.
 	@OneToOne
 	Employee employee;
 
+	
+	// Getters and Setters
 	public int getEmployer_id() {
 		return employer_id;
 	}
