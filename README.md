@@ -1,5 +1,20 @@
-# Mapping In Hibernet
+# Hibernet Mapping
+## What is Mapping ?? How to perform Mapping
 
+Hibernate is a framework that provides some abstraction layer, meaning that the programmer does not have to worry about the implementations, Hibernate does the implementations for you internally like Establishing a connection with the database, writing queries to perform CRUD operations, etc. It is a java framework that is used to develop persistence logic. Persistence logic means storing and processing the data for long use. More precisely Hibernate is an open-source, non-invasive, lightweight java ORM(Object-relational mapping) framework to develop objects that are independent of the database software and make independent persistence logic in all JAVA, JEE. <br>
+
+Hibernate mappings are one of the key features of hibernate. they establish the relationship between two database tables as attributes in your model. which allows you to easily navigate the associations in your model and criteria queries. <br>
+
+You can establish either unidirectional or bidirectional i.e you can either model them as an attribute on only one of the associated entities or both. it will not impact your database mapping tables, but it defines how to use the relationship in your model and criteria queries.
+
+The relationship that can be established between entities are-
+
+* **one to one** — it represents the one to one relationship between two tables.
+* **one to many/many to one** — it represents the one to many relationship between two tables.
+* **many to many** — it represents the many to many relationship between two tables.
+
+-----
+## How To Perform the Mapping ??
 ##### 1st Step 
 Create a Maven Project
 
