@@ -47,6 +47,30 @@ In one-to-one bidirectional relationship, there are corresponding fields of pers
 
 In the relational model, there is a foreign key on one of the sides. There must be a unique constraint for the foreign key column.
 
+----
+
+### What is one-to-many mapping?
+
+A one-to-many relationship is a relationship where one entity is related to multiple instances of another entity.
+
+In database management systems one-to-many mapping is of two types-
+
+1. One-to-many unidirectional
+2. One-to-many bidirectional
+
+#### Annotations:
+
+* @OneToMany: Defines a one-to-many association.
+* @JoinColumn: Specifies the foreign key column.
+
+### One-to-many unidirectional
+
+In this type of association, only the source entity has a relationship field that refers to the target entity. We can navigate this type of association from one side.
+
+### One-to-many bidirectional
+
+In this type of association, each entity (i.e. source and target) has a relationship field that refers to each other. We can navigate this type of association from both sides.
+
 -----
 ## How To Perform the Mapping ??
 ##### 1st Step 
