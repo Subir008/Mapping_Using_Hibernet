@@ -71,6 +71,21 @@ In this type of association, only the source entity has a relationship field tha
 
 In this type of association, each entity (i.e. source and target) has a relationship field that refers to each other. We can navigate this type of association from both sides.
 
+----
+
+### What is Many-to-Many Mapping ?
+
+Many-To-Many relationship exists when two entities are linked in such a way that one entity has many (collections) of the other entity and vice versa. 
+
+Example : Consider the relationship between a student and a teacher. Students are taught by many Teachers, and each Teacher has a class of many Students.
+
+#### Annotations:
+
+* @ManyToMany: Defines a many-to-many association.
+* @JoinTable: Specifies the join table.
+
+
+
 -----
 ## How To Perform the Mapping ??
 ##### 1st Step 
