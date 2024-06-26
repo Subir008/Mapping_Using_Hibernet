@@ -12,6 +12,40 @@ The relationship that can be established between entities are-
 * **one to one** — it represents the one to one relationship between two tables.
 * **one to many/many to one** — it represents the one to many relationship between two tables.
 * **many to many** — it represents the many to many relationship between two tables.
+-----
+### Basic Annotations
+
+* @Entity: Marks a class as an entity (a persistent Java class).
+* @Table: Specifies the table name in the database to which the entity is mapped.
+* @Id: Denotes the primary key of the entity.
+* @GeneratedValue: Defines how the primary key value is generated.
+* @Column: Specifies the column name and constraints in the table.
+
+----
+### What is one-to-one mapping?
+One to one represents that a single entity is associated with a single instance of the other entity. An instance of a source entity can be at most mapped to one instance of the target entity. We have a lot of examples around us that demonstrate this one-to-one mapping.
+
+Eg - One person has one passport, a passport is associated with a single person.
+
+In database management systems one-to-one mapping is of two types-
+
+1. One-to-one unidirectional
+2. One-to-one bidirectional
+
+#### Annotations:
+
+* @OneToOne: Defines a one-to-one association between two entities.
+* @JoinColumn: Specifies the foreign key column.
+   
+### One-to-one unidirectional
+
+In this type of mapping one entity has a property or a column that references to a property or a column in the target entity. 
+
+### One-to-one bidirectional
+
+In one-to-one bidirectional relationship, there are corresponding fields of persistence capable class type on both sides of the relationship. The field type is the type of the persistence capable class on the other side.
+
+In the relational model, there is a foreign key on one of the sides. There must be a unique constraint for the foreign key column.
 
 -----
 ## How To Perform the Mapping ??
